@@ -259,6 +259,18 @@ try {
 
 import pool from "./db.js";
 
+(async () => {
+  try {
+    const res = await pool.query("SELECT NOW()");
+    console.log("✅ Conexión exitosa:", res.rows[0]);
+  } catch (err) {
+    console.error("❌ Error de conexión:", err);
+  } finally {
+    process.exit(0);
+  }
+})();
+
+
 await pool.query(`
   CREATE TABLE IF NOT EXISTS branches (
     id SERIAL PRIMARY KEY,

@@ -19,17 +19,55 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "995a532133dcb5791af52068ed57f217bc289dc9",
     "author": "Luzhania Cespedes Arancibia",
     "commit": {
       "date": "2025-11-09T23:16:23.000Z",
       "message": "fix: trying to connect to neon db 2",
-      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/995a532133dcb5791af52068ed57f217bc289dc9"
     },
     "stats": {
       "total": 11,
       "additions": 7,
       "deletions": 4,
+      "date": "2025-11-09"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "90567157c377942bdb67ee695c799b7892c342a4",
+    "author": "Luzhania Cespedes Arancibia",
+    "commit": {
+      "date": "2025-11-09T23:26:54.000Z",
+      "message": "fix: trying to connect to neon db",
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/90567157c377942bdb67ee695c799b7892c342a4"
+    },
+    "stats": {
+      "total": 22,
+      "additions": 18,
+      "deletions": 4,
+      "date": "2025-11-09"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Luzhania Cespedes Arancibia",
+    "commit": {
+      "date": "2025-11-09T23:28:43.000Z",
+      "message": "fix: trying to connect to neon db",
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 19,
+      "deletions": 1,
       "date": "2025-11-09"
     },
     "coverage": 100,
