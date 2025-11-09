@@ -1,16 +1,35 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "41e58b504a026d013979c6210f8d696ceae0a04d",
     "author": "Luzhania Cespedes Arancibia",
     "commit": {
       "date": "2025-11-09T23:15:12.000Z",
       "message": "fix: trying to connect to neon db",
-      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/41e58b504a026d013979c6210f8d696ceae0a04d"
     },
     "stats": {
       "total": 9,
       "additions": 8,
       "deletions": 1,
+      "date": "2025-11-09"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Luzhania Cespedes Arancibia",
+    "commit": {
+      "date": "2025-11-09T23:16:23.000Z",
+      "message": "fix: trying to connect to neon db 2",
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 7,
+      "deletions": 4,
       "date": "2025-11-09"
     },
     "coverage": 100,
