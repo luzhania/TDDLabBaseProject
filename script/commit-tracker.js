@@ -259,37 +259,41 @@ try {
 
 import pool from "./db.js";
 
-(async () => {
+async function saveToDatabase() {
   try {
+    // Verifica conexión
     const res = await pool.query("SELECT NOW()");
     console.log("✅ Conexión exitosa:", res.rows[0]);
+
+    // Crear tabla si no existe
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS branches (
+        id SERIAL PRIMARY KEY,
+        user_id TEXT,
+        repo_name TEXT,
+        branch_name TEXT,
+        last_updated TIMESTAMPTZ
+      );
+    `);
+    console.log("🧱 Tabla 'branches' verificada/creada");
+
+    // Insertar o actualizar
+    await pool.query(
+      `
+      INSERT INTO branches (user_id, repo_name, branch_name, last_updated)
+      VALUES ($1, $2, $3, NOW())
+      ON CONFLICT (user_id, repo_name, branch_name)
+      DO UPDATE SET last_updated = NOW();
+      `,
+      ["usuario_demo", "tdd_template", "feature/login"]
+    );
+
+    console.log("✅ Datos guardados en Neon PostgreSQL");
   } catch (err) {
-    console.error("❌ Error de conexión:", err);
+    console.error("❌ Error en operaciones con la base de datos:", err);
   } finally {
-    process.exit(0);
+    await pool.end(); // cerrar la conexión limpia
   }
-})();
+}
 
-
-await pool.query(`
-  CREATE TABLE IF NOT EXISTS branches (
-    id SERIAL PRIMARY KEY,
-    user_id TEXT,
-    repo_name TEXT,
-    branch_name TEXT,
-    last_updated TIMESTAMPTZ
-  );
-`);
-
-await pool.query(
-  `
-  INSERT INTO branches (user_id, repo_name, branch_name, last_updated)
-  VALUES ($1, $2, $3, NOW())
-  ON CONFLICT (user_id, repo_name, branch_name)
-  DO UPDATE SET last_updated = NOW();
-  `,
-  ["usuario_demo", "tdd_template", "feature/login"]
-);
-
-console.log("✅ Datos guardados en Neon PostgreSQL");
-process.exit(0);
+await saveToDatabase();

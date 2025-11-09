@@ -76,17 +76,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "30a43bc66f2c003b9b5df4e0daf8e4cd1c8a4378",
     "author": "Luzhania Cespedes Arancibia",
     "commit": {
       "date": "2025-11-09T23:31:47.000Z",
       "message": "fix: trying to save info in db",
-      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/30a43bc66f2c003b9b5df4e0daf8e4cd1c8a4378"
     },
     "stats": {
       "total": 2,
       "additions": 0,
       "deletions": 2,
+      "date": "2025-11-09"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Luzhania Cespedes Arancibia",
+    "commit": {
+      "date": "2025-11-09T23:36:46.000Z",
+      "message": "fix: trying to save info in db 2",
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+    },
+    "stats": {
+      "total": 60,
+      "additions": 32,
+      "deletions": 28,
       "date": "2025-11-09"
     },
     "coverage": 100,
