@@ -36,9 +36,15 @@
     "testId": 5
   },
   {
-    "commitId": "HEAD",
+    "commitId": "955ad3d0b1a203186fe572d89bce45acd3e4067a",
     "commitName": "fix: trying to save info in db 2",
     "commitTimestamp": 1762731407712,
     "testId": 6
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: trying to save info in db 3 ON CONFLICT",
+    "commitTimestamp": 1762731556205,
+    "testId": 7
   }
 ]

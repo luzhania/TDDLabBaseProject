@@ -277,6 +277,12 @@ async function saveToDatabase() {
     `);
     console.log("🧱 Tabla 'branches' verificada/creada");
 
+    // Crear índice único para ON CONFLICT
+    await pool.query(`
+      CREATE UNIQUE INDEX IF NOT EXISTS unique_branch
+      ON branches (user_id, repo_name, branch_name);
+    `);
+
     // Insertar o actualizar
     await pool.query(
       `
