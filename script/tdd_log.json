@@ -24,9 +24,15 @@
     "testId": 3
   },
   {
-    "commitId": "HEAD",
+    "commitId": "e93b340b92007f9e26663d0decef2f0487bcf7b4",
     "commitName": "fix: trying to connect to neon db",
     "commitTimestamp": 1762730925089,
     "testId": 4
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: trying to save info in db",
+    "commitTimestamp": 1762731109508,
+    "testId": 5
   }
 ]
