@@ -256,3 +256,32 @@ try {
   console.error("Error en el script de seguimiento de commits:", error);
   process.exit(1);
 }
+
+import fs from "fs";
+import pool from "./db.js";
+
+const commitHistory = JSON.parse(fs.readFileSync("commit-history.json"));
+const tddLog = JSON.parse(fs.readFileSync("tdd_log.json"));
+
+await pool.query(`
+  CREATE TABLE IF NOT EXISTS branches (
+    id SERIAL PRIMARY KEY,
+    user_id TEXT,
+    repo_name TEXT,
+    branch_name TEXT,
+    last_updated TIMESTAMPTZ
+  );
+`);
+
+await pool.query(
+  `
+  INSERT INTO branches (user_id, repo_name, branch_name, last_updated)
+  VALUES ($1, $2, $3, NOW())
+  ON CONFLICT (user_id, repo_name, branch_name)
+  DO UPDATE SET last_updated = NOW();
+  `,
+  ["usuario_demo", "tdd_template", "feature/login"]
+);
+
+console.log("✅ Datos guardados en Neon PostgreSQL");
+process.exit(0);
