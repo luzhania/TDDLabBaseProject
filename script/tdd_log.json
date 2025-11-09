@@ -1,8 +1,14 @@
 [
   {
-    "commitId": "HEAD",
+    "commitId": "d6fac1844cb769261fa48dbfe55a44cccc0c8e2e",
     "commitName": "feat: trying to connect to neon db",
     "commitTimestamp": 1762729981523,
     "testId": 0
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: trying to connect to neon db",
+    "commitTimestamp": 1762730113963,
+    "testId": 1
   }
 ]

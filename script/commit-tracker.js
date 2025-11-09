@@ -259,9 +259,6 @@ try {
 
 import pool from "./db.js";
 
-const commitHistory = JSON.parse(fs.readFileSync("commit-history.json"));
-const tddLog = JSON.parse(fs.readFileSync("tdd_log.json"));
-
 await pool.query(`
   CREATE TABLE IF NOT EXISTS branches (
     id SERIAL PRIMARY KEY,
