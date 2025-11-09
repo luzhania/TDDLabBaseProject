@@ -257,7 +257,6 @@ try {
   process.exit(1);
 }
 
-import fs from "fs";
 import pool from "./db.js";
 
 const commitHistory = JSON.parse(fs.readFileSync("commit-history.json"));
