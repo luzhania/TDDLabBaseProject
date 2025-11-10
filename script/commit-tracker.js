@@ -301,9 +301,6 @@ async function uploadBranchData(userId, repoName, branchName) {
     console.log(`✅ Datos de '${branchName}' actualizados en MongoDB`);
   } catch (err) {
     console.error("❌ Error subiendo datos a MongoDB:", err);
-  } finally {
-    await client.close();
-  }
 }
 
 // Ejecutar directamente
