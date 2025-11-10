@@ -30,9 +30,23 @@
     "testId": 4
   },
   {
-    "commitId": "HEAD",
+    "commitId": "e2ba416074d928c6c504dcb249a1f703f82e7c6a",
     "commitName": "fix: close connection with db",
     "commitTimestamp": 1762737601864,
     "testId": 5
+  },
+  {
+    "numPassedTests": 1,
+    "failedTests": 0,
+    "numTotalTests": 1,
+    "timestamp": 1762738782496,
+    "success": true,
+    "testId": 6
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: saving commit-history.json data to mongo db",
+    "commitTimestamp": 1762739835540,
+    "testId": 6
   }
 ]

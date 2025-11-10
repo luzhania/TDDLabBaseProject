@@ -268,27 +268,11 @@ async function uploadBranchData(userId, repoName, branchName) {
     const collectionName = "branches_data";
     const branches = db.collection(collectionName);
 
-    // Leer JSON locales
-    // const commitHistoryPath = path.join("script", "commit-history.json");
-    // const tddLogPath = path.join("script", "tdd_log.json");
-
-    // const commitHistory = fs.existsSync(commitHistoryPath)
-    //   ? JSON.parse(fs.readFileSync(commitHistoryPath, "utf8"))
-    //   : [];
-    // const tddLog = fs.existsSync(tddLogPath)
-    //   ? JSON.parse(fs.readFileSync(tddLogPath, "utf8"))
-    //   : [];
-
     // Construir el documento
     const data = {
       user_id: userId,
       repo_name: repoName,
       branch_name: branchName,
-      // commit_history: commitHistory,
-      // tdd_log: tddLog,
-      // last_updated: fs.existsSync(tddLogPath)
-      //   ? new Date(fs.statSync(tddLogPath).mtime)
-      //   : new Date(),
     };
 
     // Upsert: crea o actualiza
