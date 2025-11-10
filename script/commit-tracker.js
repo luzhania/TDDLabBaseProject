@@ -258,7 +258,7 @@ try {
 }
 
 
-import { getDb } from "./db.js";
+import { getDb, client } from "./db.js";
 
 
 
@@ -304,4 +304,8 @@ async function uploadBranchData(userId, repoName, branchName) {
 }
 }
 // Ejecutar directamente
-uploadBranchData("usuario_demo", "tdd_template", "feature/login");
+(async () => {
+  await uploadBranchData("usuario_demo_2", "tdd_template", "feature/login");
+  await client.close();
+  process.exit(0);
+})();
