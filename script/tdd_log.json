@@ -44,9 +44,15 @@
     "testId": 6
   },
   {
-    "commitId": "HEAD",
+    "commitId": "5835f979d5139554b6610284b02db00a2f8bcac5",
     "commitName": "feat: saving commit-history.json data to mongo db",
     "commitTimestamp": 1762739835540,
     "testId": 6
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "feat: saving commit-history.json data to mongo db in branches and commits collections",
+    "commitTimestamp": 1762781798538,
+    "testId": 7
   }
 ]
