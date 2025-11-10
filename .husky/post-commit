@@ -9,6 +9,6 @@ node "$REPO_DIR/script/commit-tracker-2.js"
 
 export HUSKY=0
 git add script/commit-history.json
-git add script/tdd_log.json
-git commit --amend --no-edit 
+# git add script/tdd_log.json
+# git commit --amend --no-edit 
 unset HUSKY

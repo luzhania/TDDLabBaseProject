@@ -159,9 +159,6 @@ async function saveCommitToMongo(userId, repoName, branchName, commitData) {
       $set: {
         ...commitData,
         _id: currentSha,
-        branch: branchName,
-        repo_name: repoName,
-        user_id: userId,
       },
     },
     { upsert: true }
