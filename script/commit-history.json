@@ -19,17 +19,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6e70da77da4852567bb1039d7b8a33fa6505f5b0",
     "author": "Luzhania Cespedes Arancibia",
     "commit": {
       "date": "2025-11-10T01:11:04.000Z",
       "message": "fix: trying to connect to mongo db atlas fourth try",
-      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/6e70da77da4852567bb1039d7b8a33fa6505f5b0"
     },
     "stats": {
       "total": 13,
       "additions": 9,
       "deletions": 4,
+      "date": "2025-11-10"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Luzhania Cespedes Arancibia",
+    "commit": {
+      "date": "2025-11-10T01:20:01.000Z",
+      "message": "fix: close connection with db",
+      "url": "https://github.com/luzhania/TDDLabBaseProject/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 8,
+      "deletions": 2,
       "date": "2025-11-10"
     },
     "coverage": 100,

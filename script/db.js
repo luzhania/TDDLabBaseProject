@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config(); // <-- esto carga tu .env
 
 const uri = process.env.MONGO_URI;
-const client = new MongoClient(uri);
+export const client = new MongoClient(uri);
 
 let dbInstance = null;
 

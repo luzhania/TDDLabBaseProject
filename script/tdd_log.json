@@ -18,9 +18,21 @@
     "testId": 2
   },
   {
-    "commitId": "HEAD",
+    "commitId": "3cc69c043b8d32051f38daffa311f317735f9ff9",
     "commitName": "fix: trying to connect to mongo db atlas fourth try",
     "commitTimestamp": 1762737073877,
     "testId": 3
+  },
+  {
+    "commitId": "6e70da77da4852567bb1039d7b8a33fa6505f5b0",
+    "commitName": "fix: close connection with db after save data",
+    "commitTimestamp": 1762737470272,
+    "testId": 4
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: close connection with db",
+    "commitTimestamp": 1762737601864,
+    "testId": 5
   }
 ]
