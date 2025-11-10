@@ -44,4 +44,4 @@ const updateJsonFile = () => {
     fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2));
 };
 
-updateJsonFile();
+// updateJsonFile();

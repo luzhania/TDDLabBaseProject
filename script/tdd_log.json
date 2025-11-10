@@ -56,9 +56,15 @@
     "testId": 7
   },
   {
-    "commitId": "HEAD",
+    "commitId": "8912039e2031427b2866291655e31248833e8479",
     "commitName": "fix: delete commit --amend to not change sha",
     "commitTimestamp": 1762783170351,
     "testId": 8
+  },
+  {
+    "commitId": "HEAD",
+    "commitName": "fix: save real sha instead of HEAD",
+    "commitTimestamp": 1762784058681,
+    "testId": 9
   }
 ]
