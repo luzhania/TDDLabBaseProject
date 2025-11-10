@@ -152,6 +152,10 @@ async function saveCommitToMongo(userId, repoName, branchName, commitData) {
       ? execSync("git rev-parse HEAD").toString().trim()
       : commitData.sha;
 
+  // Asegurarnos de que el campo sha del documento contiene el SHA real
+  // (si venía como HEAD, lo reemplazamos por el SHA resuelto)
+  commitData.sha = currentSha;
+
   // Insertar o actualizar commit
   await commitsCol.updateOne(
     { _id: currentSha },
