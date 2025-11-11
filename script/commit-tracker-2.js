@@ -22,6 +22,23 @@ async function getRepoName() {
   return path.basename(url);
 }
 
+async function getRepoOwner() {
+  // Extrae el owner desde remote.origin.url, soportando git@ y https
+  try {
+    let url = execSync("git config --get remote.origin.url").toString().trim().replace(/\.git$/, "");
+    if (url.startsWith("git@")) {
+      url = url.replace(/^git@([^:]+):(.+)$/, "https://$1/$2");
+    }
+    // path.dirname('https://host/owner/repo') -> 'https://host/owner'
+    // path.basename(...) -> 'owner'
+    const owner = path.basename(path.dirname(url));
+    return owner || null;
+  } catch (err) {
+    console.warn("⚠️ No se pudo obtener el owner del repo:", err.message);
+    return null;
+  }
+}
+
 // ===================
 // CAPTURAR COMMIT
 // ===================
@@ -186,8 +203,9 @@ async function saveCommitToMongo(userId, repoName, branchName, commitData) {
 // ===================
 (async () => {
   try {
-    const userId = "usuario_demo_2";
-    const repoName = await getRepoName();
+  const owner = await getRepoOwner();
+  const userId = owner || "usuario_demo_2";
+  const repoName = await getRepoName();
     const branchName = await getBranchName();
 
     const currentCommitData = getCommitInfo(HEAD_MARKER);
