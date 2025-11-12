@@ -7,3 +7,4 @@ dist
 report.json
 ./.husky/_
 .husky/.commit-state
+.env
